@@ -6,7 +6,7 @@ backend:
   # name: github
   # repo: surjithctly/neat-starter
 media_folder: "src/static/img"
-public_folder: "src/static/img"
+public_folder: "/static/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -30,6 +30,23 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+  - label: "Prestations"
+    name: "prestations"
+    folder: "src/prestations"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Prix", name: "price", widget: "string" }
+      - { label: "Image", name: "thumbnail", widget: "image" }
+      - widget: list
+        label: "tags"
+        name: "tags"
+        multiple: false
+        create: false
+        default: ["prestation"]
   - label: "Settings"
     name: "settings"
     editor:

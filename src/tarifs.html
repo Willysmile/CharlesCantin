@@ -1,26 +1,19 @@
 ---
 layout: default
-title: Neat Starter
+title: Tarifs et prestations
 path: tarifs
 ---
 
-<div
-  class="container mx-auto lg:h-screen flex flex-col justify-center items-center"
->
-  <h1>
-    Welcome to
-    <strong
-      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
-    >
-      {{title}}
-    </strong>
-  </h1>
-  <div>Tarifs</div>
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
+<div class="container mx-auto h-full flex flex-col my-3">
+  <h1 class="my-2"> {{title}} </h1>
+  
+<p class="w-2/3 my-5 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam a voluptatum rem possimus excepturi,
+   quis ut cupiditate voluptates in voluptatem aliquid nesciunt sequi reiciendis quam. Numquam cupiditate 
+   quibusdam et ipsa mollitia officia dolores, aspernatur ad quas voluptatum eum minima tempora,
+    adipisci sunt facilis vero ab deserunt sapiente molestiae! Sapiente, dignissimos? </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 ">
+  {% include "./prestations/index.html" %}
+    </div>
 
-  {% include "./_includes/partials/content.html" %}
+  </section>
 </div>

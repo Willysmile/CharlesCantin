@@ -1,0 +1,28 @@
+{% set prestationslist = collections.prestation %} {% for prestation in
+prestationslist %}
+<div
+  class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 my-3 mx-3"
+>
+  <img
+    class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+    src="{{ prestation.data.thumbnail | url }}"
+    alt=" Photo prestation {{ prestation.data.title }}"
+  />
+  <div class="flex flex-col justify-between p-4 leading-normal">
+    <h5
+      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >{% if prestation.data.title %} {{ prestation.data.title }} {% else %}
+      Charles Cantin - Photographe {% endif %}</h5
+    >
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 mb-10"
+      >{% if prestation.data.description %} {{ prestation.data.description }}{%
+      else %} Description à venir {% endif %}</p
+    >
+    <hr />
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 mt-3"
+      >{% if prestation.data.price %} {{ prestation.data.price }}{% else %} Me
+      contacter pour plus d’infos {% endif %}</p
+    >
+  </div>
+</div>
+{% endfor %}
