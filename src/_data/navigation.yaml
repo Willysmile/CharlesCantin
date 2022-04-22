@@ -1,8 +1,8 @@
 items:
   - text: Accueil
-    url: /home
-  - text: Portfolio
-    url: /portfolio
+    url: /
+  - text: Galerie
+    url: /galerie
   - text: Tarifs
     url: /tarifs
   - text: Contact

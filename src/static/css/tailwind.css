@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Vaani&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nobile&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,8 +8,21 @@
 
 /*Your Custom CSS Goes here*/
 
+body {
+  font-family: "Nobile", serif;
+}
+
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+  font-family: "Mukta Vaani", serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Infant", serif;
 }
 
 h3 {
@@ -21,4 +34,17 @@ h3 {
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
+}
+
+#homeBackground {
+  background: url(../img/bg-home.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+}
+
+#shadowtext {
+  color: #f0f7ee;
+
+  text-shadow: 3px 2px 0 #7a7a7a;
 }
