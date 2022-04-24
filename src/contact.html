@@ -4,23 +4,83 @@ title: Neat Starter
 path: contact
 ---
 
-<div
-  class="container mx-auto lg:h-screen flex flex-col justify-center items-center"
->
-  <h1>
-    Welcome to
-    <strong
-      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
-    >
-      {{title}}
-    </strong>
-  </h1>
-  <div>Contact</div>
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
+<div class="container mx-auto lg:h-screen flex justify-center">
+  <div>
+    <h1>Contactez-moi</h1>
 
-  {% include "./_includes/partials/content.html" %}
+    <p class="my-5 text-center"
+      >Vous souhaitez plus d’informations sur une prestation ou connaitre mes
+      disponibilités ? <br />
+      N’hésitez pas à me laisser un message !!
+    </p>
+
+    <form name="contact" method="post" data-netlify="true" class="text-center">
+      <div>
+        <label for="firstname" class="block my-4">Votre nom</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          placeholder="Saississez votre nom"
+          required
+          class="rounded w-96 my-1"
+        />
+      </div>
+
+      <label for="prenom" class="block my-4">Votre prénom</label>
+      <input
+        type="text"
+        id="prenom"
+        name="prenom"
+        placeholder="Saississez votre prénom"
+        required
+        class="rounded w-96 my-1"
+      />
+
+      <div>
+        <label for="email" class="block my-4">Votre e-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Saississez votre email"
+          required
+          class="rounded w-96 my-1"
+        />
+      </div>
+
+      <div>
+        <label for="sujet" class="block my-4"
+          >Quel est le sujet de votre message ?</label
+        >
+        <select name="sujet" id="sujet" required class="rounded">
+          <option value="" disabled selected hidden
+            >Choisissez le sujet de votre message</option
+          >
+          <option value="prestation"
+            >Avoir plus d’informations sur une prestation</option
+          >
+          <option value="disponibilités">Connaitre mes disponibilités</option>
+
+          <option value="autre">Autre...</option>
+        </select>
+      </div>
+      <div class="block my-4">
+        <label for="message" class="block">Votre message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Bonjour, je vous contacte car...."
+          required
+          class="rounded w-96 my-2"
+          rows="5"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="bg-transparent hover:bg-secondary_cc text-green_cc font-semibold hover:text-white_cc py-2 px-4 border border-green_cc hover:border-transparent rounded"
+        >Envoi du message</button
+      >
+    </form>
+  </div>
 </div>
