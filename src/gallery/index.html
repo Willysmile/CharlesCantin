@@ -1,10 +1,11 @@
 {% set photoslist = collections.galerie %} {% for photo in photoslist %}
 
 <div
-  class="{{ photo.data.categorie }} gallery flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 my-3 mx-3"
+  class="{{ photo.data.categorie }} gallery flex flex-col w-auto h-auto items-center bg-white rounded-lg border 
+  shadow-md md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 my-3 mx-3"
 >
   <img
-    class="object-cover w-full h-full"
+    class="object-cover w-auto h-auto"
     src="{{ photo.data.thumbnail | url }}"
     alt=" Photo prestation {{ prestation.data.description }}"
   />
