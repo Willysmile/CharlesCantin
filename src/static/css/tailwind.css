@@ -48,3 +48,45 @@ body pre[class*="language-"] {
   color: #f0f7ee;
   text-shadow: 3px 2px 0 #7a7a7a;
 }
+
+#scroll_to_top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 50px;
+  right: 30px;
+}
+#scroll_to_top img {
+  width: 40px;
+}
+
+.social-networks img {
+  width: 3rem;
+  margin: 0 1rem;
+}
+
+.gallery img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.logo img {
+  width: 10rem;
+}
+
+@media (min-width: 1024px) {
+  .gallery img {
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .logo {
+    margin-left: 20rem;
+  }
+  .gallery img {
+    width: 40rem;
+    height: 40rem;
+  }
+}

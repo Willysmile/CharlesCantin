@@ -7,7 +7,7 @@ backend:
   # repo: surjithctly/neat-starter
 media_folder: "src/static/img"
 public_folder: "/static/img"
-
+locale: "fr"
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 # publish_mode: editorial_workflow
@@ -64,20 +64,18 @@ collections:
           required: true,
         }
       - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: false
-        create: false
-        default: ["galerie"]
-        options: ["galerie"]
-      - widget: select
         label: "Catégorie"
         name: "categorie"
         multiple: false
         create: false
         options:
           ["mariage", "grossesse", "bébé", "famille", "baptême", "couple"]
-
+      - widget: hidden
+        label: "tags"
+        name: "tags"
+        multiple: false
+        create: false
+        default: "galerie"
   - label: "Settings"
     name: "settings"
     editor:
@@ -95,18 +93,7 @@ collections:
             fields:
               - { label: Titre, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
-        fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
+
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
@@ -114,3 +101,5 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+          - { label: keywords, name: Mots clés, widget: string }
+          - { label: description, name: Meta description, widget: string }

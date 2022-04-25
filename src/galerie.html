@@ -4,7 +4,7 @@ title: Neat Starter
 path: galerie
 ---
 
-<div class="container-xl mx-auto min-h-screen">
+<div class="mx-auto min-h-screen">
   <div class="text-center mt-5">
     <select id="select" class="my-2">
       <option value="null">Choississez votre catégorie</option>
@@ -14,13 +14,20 @@ path: galerie
       <option value="grossesse">Grossesse</option>
       <option value="mariage">Mariage</option>
       <option value="couple">Couple</option>
-      <option value="bapteme">Bâpteme</option>
+      <option value="baptême">Baptême</option>
     </select>
   </div>
   <div class="flex flex-row justify-center items-center">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 flex"
+    >
       {% include "./gallery/index.html" %}
     </div>
+  </div>
+  <div id="scroll_to_top">
+    <a href="#top"
+      ><img src="/static/img/up.png" alt="Retourner en haut" class="rounded"
+    /></a>
   </div>
 </div>
 
