@@ -4,23 +4,40 @@ title: Neat Starter
 path: galerie
 ---
 
-<div
-  class="container mx-auto lg:h-screen flex flex-col justify-center items-center"
->
-  <h1>
-    Welcome to
-    <strong
-      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
-    >
-      {{title}}
-    </strong>
-  </h1>
-  <div>Portfolio</div>
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
-
-  {% include "./_includes/partials/content.html" %}
+<div class="container-xl mx-auto min-h-screen">
+  <div class="text-center mt-5">
+    <select id="select" class="my-2">
+      <option value="null">Choississez votre catégorie</option>
+      <option value="null">Toutes les catégories</option>
+      <option value="bébé">Bébé</option>
+      <option value="famille">Famille</option>
+      <option value="grossesse">Grossesse</option>
+      <option value="mariage">Mariage</option>
+      <option value="couple">Couple</option>
+      <option value="bapteme">Bâpteme</option>
+    </select>
+  </div>
+  <div class="flex flex-row justify-center items-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex">
+      {% include "./gallery/index.html" %}
+    </div>
+  </div>
 </div>
+
+<script>
+  const selectElement = document.getElementById("select");
+
+  selectElement.addEventListener("change", (e) => {
+    if (e.target.value == "null") {
+      const gallery = document.querySelectorAll(".gallery");
+      gallery.forEach((item) => item.classList.remove("hidden"));
+    } else {
+      console.log(e.target.value);
+      let value = "." + e.target.value;
+      const test = document.querySelectorAll(value);
+      const gallery = document.querySelectorAll(".gallery");
+      gallery.forEach((item) => item.classList.add("hidden"));
+      test.forEach((item) => item.classList.remove("hidden"));
+    }
+  });
+</script>
