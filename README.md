@@ -1,60 +1,78 @@
-# Neat Starter
+# Projet Studi / Eval d’entrainement
 
-Starter Template for **N**etlify CMS, **E**leventy, **A**lpine JS & **T**ailwind CSS
+Evaluation d’entrainement dans le cadre de la formation Studi DWWM
+
+
+## Annexes du projet
+
+Les annexes du projet se situent dans le répertoire «Annexes» du projet
+
 
 ## Live Demo
 
-[https://neat-starter.netlify.app/](https://neat-starter.netlify.app/)
+[https://cantin-charles-photographe.netlify.app](https://cantin-charles-photographe.netlify.app)
 
-### Technologies used:
+### Technologies utilisées:
 
 - [Netlify CMS](https://www.netlifycms.org/)
 - [Eleventy](https://www.11ty.dev/)
 - [Alpine.js](https://github.com/alpinejs/alpine)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-| ![image](https://user-images.githubusercontent.com/1884712/93762662-a62e4700-fc2d-11ea-9b2c-fda9f503402b.png) |
-| ------------------------------------------------------------------------------------------------------------- |
+## Déploiement en ligne
 
+Pour le déploiement en ligne, se référer à la documentation de l’hebergeur.
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/surjithctly/neat-starter&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
+## Déploiement en local
 
-## Getting Started
-
-Detailed instructions are available in my blog. [Check it out](https://blog.surjithctly.in/neat-stack-create-a-static-website-with-netlify-cms-eleventy-alpinejs-and-tailwindcss)
-
-### 1\. Clone this Repository
+### 1\. Clone le dépot Git
 
 ```
-git clone https://github.com/surjithctly/neat-starter.git
+https://github.com/Willysmile/CharlesCantin.git
 ```
 
-### 2\. Navigate to the directory
+### 2\. Naviguer et sélectionner le répertoire
 
 ```
-cd neat-starter
+cd CharlesCantin
 ```
 
-### 3\. Install dependencies
+### 3\. Installer les dépendances
 
 ```
 npm install
 ```
 
-### 4\. Build the project to generate the first CSS
+### 4\. Construire le projet pour générer la 1ère feuille de style CSS
 
-This step is only required the very first time.
+Cette étape n’est à réaliser que lors du tout 1er lancement du projet.
 
 ```
 npm run build
 ```
 
-### 5\. Run Eleventy
+### 5\. Configurer le back-end en local
+
+```
+Dans le répertoire src/admin du projet, dans le fichier config.yaml :
+
+Passer la valeur à : `true`
+
+// Please run "npx netlify-cms-proxy-server" for local backend
+
+local_backend: true
+```
+### 6\. Lancer le back-end en local
+
+`npx netlify-cms-proxy-server`
+
+
+### 7\. Lancer Eleventy
 
 ```
 npm run start
 ```
 
-## Author
+## Auteur
 
-Surjith S M ( [@surjithctly](https://surjithctly.in/) )
+Fabien Rabillard // Eval Studi 2022
