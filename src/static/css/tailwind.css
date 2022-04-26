@@ -44,11 +44,6 @@ body pre[class*="language-"] {
   background-repeat: none;
 }
 
-#shadowtext {
-  color: #f0f7ee;
-  text-shadow: 3px 2px 0 #7a7a7a;
-}
-
 #scroll_to_top {
   position: fixed;
   width: 40px;
