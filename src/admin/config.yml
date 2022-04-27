@@ -59,8 +59,8 @@ collections:
         multiple: false
         create: false
         default: "galerie"
-  - label: "Settings"
-    name: "settings"
+  - label: "Réglages"
+    name: "reglages"
     editor:
       preview: false
     files:
