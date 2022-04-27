@@ -32,19 +32,26 @@ path: galerie
 </div>
 
 <script>
-  const selectElement = document.getElementById("select");
+  // Script pour filtrer les photos
 
+  // Récupération du select
+  const selectElement = document.getElementById("select");
+  // Ecoute des évènements sur le select
   selectElement.addEventListener("change", (e) => {
+    // Si le select renvoi "null" (2 ères option du select)
+    // On récupère et boucle sur toutes les photos afin d’enlever la classe .hidden si présente
     if (e.target.value == "null") {
       const gallery = document.querySelectorAll(".gallery");
       gallery.forEach((item) => item.classList.remove("hidden"));
     } else {
-      console.log(e.target.value);
+      // Sinon on récupère la valeur de l’option et les photos correspondantes
       let value = "." + e.target.value;
-      const test = document.querySelectorAll(value);
+      const val = document.querySelectorAll(value);
       const gallery = document.querySelectorAll(".gallery");
+      // On ajoute la classe .hidden sur toutes les photos
       gallery.forEach((item) => item.classList.add("hidden"));
-      test.forEach((item) => item.classList.remove("hidden"));
+      // On enlève la classe .hidden uniquement sur les photos dont la catégorie est selectionnée
+      val.forEach((item) => item.classList.remove("hidden"));
     }
   });
 </script>

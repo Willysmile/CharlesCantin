@@ -12,24 +12,6 @@ locale: "fr"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
   - label: "Prestations"
     name: "prestations"
     folder: "src/prestations"
@@ -70,6 +52,7 @@ collections:
         create: false
         options:
           ["mariage", "grossesse", "bébé", "famille", "baptême", "couple"]
+      # permet
       - widget: hidden
         label: "tags"
         name: "tags"
